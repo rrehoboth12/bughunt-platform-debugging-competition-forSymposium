@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "MIRAI — BUG HUNT",
+      "hasCanvas": false,
+      "bodyTextLen": 812,
+      "bodyTextHash": "1297c2bda5ebcf9141e92a61755f5b8867ee68951f22027889efe13ed247c0eb",
+      "bodyTextPrefix": "BH MIRAI BUG HUNT COORDINATOR ARUNACHALA COLLEGE OF ENGINEERING ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "MIRAI — BUG HUNT",
+      "hasCanvas": false,
+      "bodyTextLen": 789,
+      "bodyTextHash": "f25b5dbe1b5616ba251f34a89cd00d5457485bcd9a037f51322891dc033f41b9",
+      "bodyTextPrefix": "BH MIRAI BUG HUNT COORDINATOR ARUNACHALA COLLEGE OF ENGINEERING ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

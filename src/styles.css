@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #07080c;
+  --color-bg-elevated: #101218;
+  --color-bg-subtle: #161b24;
+  --color-fg: #e8eaed;
+  --color-muted: #8b919a;
+  --color-subtle: #5c6370;
+  --color-primary: #0ea5e9;
+  --color-primary-fg: #042433;
+  --color-primary-dim: #0284c7;
+  --color-border: #222833;
+  --color-border-strong: #323a48;
+  --color-danger: #ef4444;
+  --color-warn: #f59e0b;
+  --color-success: #10b981;
+  --color-info: #38bdf8;
+  --color-gold: #d4af37;
+  --color-silver: #c0c8d4;
+  --color-bronze: #c67b3a;
+  --color-partial: #f97316;
+
+  --color-background: #07080c;
+  --color-foreground: #e8eaed;
+  --color-card: #101218;
+  --color-card-foreground: #e8eaed;
+  --color-popover: #101218;
+  --color-popover-foreground: #e8eaed;
+  --color-secondary: #161b24;
+  --color-secondary-foreground: #e8eaed;
+  --color-muted-foreground: #8b919a;
+  --color-accent: #0ea5e9;
+  --color-accent-foreground: #042433;
+  --color-destructive: #ef4444;
+  --color-input: #222833;
+  --color-ring: #0ea5e9;
+
+  --radius: 0.75rem;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --font-display: "Syne", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 18px color-mix(in oklab, var(--color-primary) 38%, transparent);
+  }
+  .glow-danger {
+    box-shadow: 0 0 18px color-mix(in oklab, var(--color-danger) 40%, transparent);
+  }
+  .glow-success {
+    box-shadow: 0 0 18px color-mix(in oklab, var(--color-success) 35%, transparent);
+  }
+  .glow-panel {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-primary) 18%, transparent),
+      0 18px 50px color-mix(in oklab, #000 45%, transparent);
+  }
+}
+
+@keyframes grid-shift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 48px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
